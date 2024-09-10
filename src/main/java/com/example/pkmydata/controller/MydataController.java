@@ -18,7 +18,7 @@ public class MydataController {
         this.mydataService = mydataService;
     }
 
-    @GetMapping("/api/mydata")
+    @GetMapping("/mydata")
     public MydataResponseDto getMydata(@RequestHeader("Authorization") String token){
         String jwtToken = token.substring(7);
         return mydataService.getMydata(jwtToken);
